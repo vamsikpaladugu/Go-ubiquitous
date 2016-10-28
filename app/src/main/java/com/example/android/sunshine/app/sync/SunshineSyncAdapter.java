@@ -549,6 +549,12 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
     }
 
     private void syncWithWatch() {
+
+
+        if (mGoogleApiClient==null){
+            return;
+        }
+
         Context context = getContext();
         //checking the last update and notify if it' the first of the day
         // Last sync was more than 1 day ago, let's send a notification with the weather.
@@ -566,8 +572,7 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
             String desc = cursor.getString(INDEX_SHORT_DESC);
 
 
-            Log.v("syncWithWatch", "" + weatherId + "," + high + "," + low + "," + desc);
-
+            //Log.v("syncWithWatch", "" + weatherId + "," + high + "," + low + "," + desc);
 
             mGoogleApiClient.connect();
 
@@ -581,7 +586,6 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
             PutDataRequest putDataReq = putDataMapReq.asPutDataRequest();
 
             Wearable.DataApi.putDataItem(mGoogleApiClient, putDataReq);
-
 
 
         }
