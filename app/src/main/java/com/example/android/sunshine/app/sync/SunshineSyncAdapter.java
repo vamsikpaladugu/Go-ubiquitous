@@ -718,7 +718,7 @@ public class SunshineSyncAdapter extends AbstractThreadedSyncAdapter {
 
     private static void onAccountCreated(Account newAccount, Context context) {
         /*
-         * Since we've created an account
+         * Since we've created an account edited
          */
         SunshineSyncAdapter.configurePeriodicSync(context, SYNC_INTERVAL, SYNC_FLEXTIME);
 
