@@ -1,7 +1,7 @@
 Go-ubiquitous
 ===================================
 
-Watchface for Sunshine weather app
+Watchface for [Sunshine](https://github.com/udacity/Sunshine-Version-2) weather app
 
 
 Screens
